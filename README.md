@@ -59,6 +59,24 @@ To evaluate our model, we employed a 10-fold cross-validation method. The losses
 - Selects how the Jetbot should respond to the user
 - Converts the text to speech
 
+(Additional) **model_evaluation.ipynb**
+- Train and validate the clothe classification model using k-fold cross-validation
+- This code supposes that the dataset is ordered as follows:
+```
++-- dataset
+	+-- train
+		+-- class 1
+		+-- class 2
+		...
+		+-- class n
+	+-- test
+		+-- class 1
+		+-- class 2
+		...
+		+-- class n
+```
+- You can get the dataset that we used **[here](https://drive.google.com/file/d/1IdqY1mneqy3sb1bmKObyA9x1d2vAbByQ/view?usp=sharing)**.
+
 ## Limitations and Future work
 Our project is limited on the following
 - Jetbot latency is considerably high, hence it might take couple of seconds to respond to the user's commands.
