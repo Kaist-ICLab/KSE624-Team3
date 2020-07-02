@@ -1,6 +1,7 @@
 # Codebase for the KSE624 Final Project, Spring 2020 at KAIST
 
 Authors: Rafikatiwi Nur Pujiarti, Willmer R. Quinones
+
 Contact: rafikatiwi@kaist.ac.kr, wrafell@kaist.ac.kr
 
 This is a practical implementation of [Jetbot AI Robot Kit (powered by NVIDIA Jetson Nano)](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetbot-ai-robot-kit/), developed for the **KSE624 2020 spring class (Mobile and Pervasive Computing for Knowledge Services)** at [KAIST](https://www.kaist.ac.kr/kr/), which responds to the following Problem Statement:
