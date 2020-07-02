@@ -32,11 +32,11 @@ We use a deep convolutional neural network (ConvNet) model on [PyTorch](https://
 
 To evaluate our model, we employed a 10-fold cross-validation method. The losses of the training process can be seen in the picture below. Our model achieved an accuracy of **0.81 ± 0.03** on our testing set.
 
-![image](./evaluation_plot.png)
+![image](/images/evaluation_plot.png)
 
 ## System Flow
 
-![image](./system_flow.jpg)
+![image](/images/system_flow.jpg)
 
 ## Code Explanation
 
