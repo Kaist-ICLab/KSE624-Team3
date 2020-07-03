@@ -10,9 +10,8 @@ This is a practical implementation of [Jetbot AI Robot Kit (powered by NVIDIA Je
 
 To solve this problem, we developed a system in which the Jetbot scans the user's outfit using its camera, and tell the user (voice-based) what she is missing based on the weather condition outside. For instance, if it is cold, and the user is not wearing a jacket, the Jetbot would ask her to dress properly. We achieve this by building a deep neural network model trained with a subset of [Large-scale Fashion Database](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html).
 
-Check our demo video bellow!
+**[Check our demo video!](https://youtu.be/Ts8T8GmhRlA)**
 
-https://youtu.be/Ts8T8GmhRlA
 
 ## Applied Technologies
 #### Google Cloud Platform
