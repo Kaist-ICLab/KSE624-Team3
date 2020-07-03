@@ -12,6 +12,7 @@ To solve this problem, we developed a system in which the Jetbot scans the user'
 
 **[Check our demo video!](https://youtu.be/Ts8T8GmhRlA)**
 
+The overview of our project can be seen in this [Google Slide](https://docs.google.com/presentation/d/18f97j2UocjQmiYWF8Urt2izIcVlgRVoF81XjCm-BR2A/edit?usp=sharing)
 
 ## Applied Technologies
 #### Google Cloud Platform
