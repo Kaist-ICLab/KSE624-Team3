@@ -10,6 +10,10 @@ This is a practical implementation of [Jetbot AI Robot Kit (powered by NVIDIA Je
 
 To solve this problem, we developed a system in which the Jetbot scans the user's outfit using its camera, and tell the user (voice-based) what she is missing based on the weather condition outside. For instance, if it is cold, and the user is not wearing a jacket, the Jetbot would ask her to dress properly. We achieve this by building a deep neural network model trained with a subset of [Large-scale Fashion Database](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html).
 
+Check our demo video bellow!
+
+https://youtu.be/Ts8T8GmhRlA
+
 ## Applied Technologies
 #### Google Cloud Platform
 We use [Google Cloud Patform](https://cloud.google.com/text-to-speech/docs/reference/libraries) to handle the text-to-speech tasks.
@@ -25,8 +29,6 @@ We use the [speech_recognition](https://www.codementor.io/@edwardzionsaji/simple
 
 #### User Recognition
 We use the Jetbot camera and the [Microsoft Azure API for Object Detection](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) to detect the user and the an image of her in order to classify her outfit.
-
-
 
 #### Outfit Classification
 We use a deep convolutional neural network (ConvNet) model on [PyTorch](https://pytorch.org/), using [ResNet50](https://arxiv.org/abs/1512.03385) for the outfit recognition. Our model was trained using a subset of [Large-scale Fashion Database](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html): we manually cropped and extracted 5 categories from the whole database: **long pants, shorts, shirt, thin clothes,** and **thick coats** (700 images from each category). Then, we divided the dataset into training set (600 images) and testing set (100 images). You can get the dataset **[here](https://drive.google.com/file/d/1IdqY1mneqy3sb1bmKObyA9x1d2vAbByQ/view?usp=sharing)**.
