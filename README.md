@@ -6,13 +6,17 @@ Contact: rafikatiwi@kaist.ac.kr, wrafell@kaist.ac.kr
 
 This is a practical implementation of [Jetbot AI Robot Kit (powered by NVIDIA Jetson Nano)](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetbot-ai-robot-kit/), developed for the **KSE624 2020 spring class (Mobile and Pervasive Computing for Knowledge Services)** at [KAIST](https://www.kaist.ac.kr/kr/), which responds to the following Problem Statement:
 
-> Graduate Students living alone and off-campus needs to be aware of the condition outside before going out of their room because their plans, the way they dress, and the equipment they need to bring will depend on the condition outside.
+> Graduate Students living alone and off-campus need to be aware of the condition outside before going out of their room because their plans, the way they dress, and the equipment they need to bring will depend on the condition outside.
 
 To solve this problem, we developed a system in which the Jetbot scans the user's outfit using its camera, and tell the user (voice-based) what she is missing based on the weather condition outside. For instance, if it is cold, and the user is not wearing a jacket, the Jetbot would ask her to dress properly. We achieve this by building a deep neural network model trained with a subset of [Large-scale Fashion Database](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html).
 
-**[Check our demo video!](https://youtu.be/Ts8T8GmhRlA)**
+#### Demo Video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ts8T8GmhRlA?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The overview of our project can be seen in this [Google Slide](https://docs.google.com/presentation/d/18f97j2UocjQmiYWF8Urt2izIcVlgRVoF81XjCm-BR2A/edit?usp=sharing)
+#### Project Overview
+The overview of our project can be seen in this [**Google Slide**](https://docs.google.com/presentation/d/18f97j2UocjQmiYWF8Urt2izIcVlgRVoF81XjCm-BR2A/edit?usp=sharing)
+
+<a href="https://docs.google.com/presentation/d/18f97j2UocjQmiYWF8Urt2izIcVlgRVoF81XjCm-BR2A/edit?usp=sharing"><img src="https://i.ibb.co/8m8fMQh/Final-Presentation.jpg" alt="Final-Presentation" border="0"></a>
 
 ## Applied Technologies
 #### Google Cloud Platform
@@ -40,6 +44,30 @@ To evaluate our model, we employed a 10-fold cross-validation method. The losses
 ## System Flow
 
 ![image](/images/system_flow.jpg)
+
+## Modules and Libraries
+#### Jetson Nano
+1. python 3.7
+2. torch 1.5.1
+3. torchvision 0.6.1
+4. PIL 2.2.2
+5. json 1.6.1
+6. requests 2.24
+7. numpy 1.18
+8. google 2.0.3
+9. datetime 2.3
+10. playsound 1.2.2
+11. speech_recognition 3.8.1
+
+#### Deep Learning Model Development
+1. python 3.7
+2. numpy 1.18
+3. matplotlib 3.2.2
+4. torch 1.5.1
+5. torchvision 0.6.1
+6. scikit-learn 0.23.1
+7. PIL 2.2.2
+8. pandas 1.0.5
 
 ## Code Explanation
 
@@ -78,6 +106,11 @@ To evaluate our model, we employed a 10-fold cross-validation method. The losses
 		+-- class n
 ```
 - You can get the dataset that we used **[here](https://drive.google.com/file/d/1IdqY1mneqy3sb1bmKObyA9x1d2vAbByQ/view?usp=sharing)**.
+
+## Running the Project
+1. Get your own subscription keys from Microsoft Azure, AirVisual and OpenWeather API, and your Google Cloud Platform authentication file.
+2. Update the variables `subscription_key` and `analyze_url` in `clothes_recognition.py` with your Microsoft Azure Service keys; update the variables `api_key_ow` and `api_key_iq` in `weather_callAPI.py` with your OpenWeather API key and AirVisual API key respectively; and update the variable `client` in `jetbot_actions.py` with your Google Cloud Platform authentication file.
+3. Locate your Jetson Nano directory and run `python3 main.py` in your terminal.
 
 ## Limitations and Future work
 Our project is limited on the following
