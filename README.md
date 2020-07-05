@@ -72,20 +72,22 @@ To evaluate our model, we employed a 10-fold cross-validation method. The losses
 ## Code Explanation
 
 (1) **main.py**
-- Initializes the Jetbot camera
-- Waits for the user command
-- Responds to the user
+- Initializes the Jetbot camera to scan the user's outfit
+- Waits for the user command and requests to `jetbot_actions.py` the corresponding answers. The commands can be:
+	- `Hello robot` - Jetbot awakes and greets the user with general weather information.
+	- `weather` - Jetbot provides information about the weather.
+	- `air pollution` - Jetbot provides information about the air quality.
+	- `how do I look` - Jetbot scans the user's outfit and tells the user if anything is missing according to the weather condition.
 
 (2) **weather_callAPI.py**
-- Collects and processes the weather and air quality information
-- Filters the information that will be communicated to the user
+- Collects and processes the weather and air quality information that will be communicated to the user. 
 
 (3) **clothes_recognition.py**
-- Detects the user using the camera
-- Classifies the user's outfit using the ConvNet model
+- Detects the user using the camera and the Microsoft Azure Service.
+- Classifies the user's outfit using the ConvNet model.
 
 (4) **jetbot_actions.py**
-- Converts the user's speech to text
+- Converts the user's command (retrieved by `main.py`) to text
 - Selects how the Jetbot should respond to the user
 - Converts the text to speech
 
